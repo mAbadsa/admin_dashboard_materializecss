@@ -112,77 +112,89 @@
                   <tbody>
                     <tr>
                       <td width="70">
-                          <img
-                            src="img/person1.jpg"
-                            alt="avatar"
-                            class="responsive-img circle"
-                            style="margin-left: 10px; width: 40px;">
+                        <img
+                          src="img/person1.jpg"
+                          alt="avatar"
+                          class="responsive-img circle"
+                          style="margin-left: 10px; width: 40px"
+                        />
                       </td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Est, suscipit?</td>
+                      <td>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Est, suscipit?
+                      </td>
                       <td>
                         <a href="#!" class="green-text">
-                            <i class="material-icons">done</i>
+                          <i class="material-icons">done</i>
                         </a>
                         <a href="#!" class="red-text">
-                            <i class="material-icons">close</i>
+                          <i class="material-icons">close</i>
                         </a>
                       </td>
                     </tr>
                     <tr>
                       <td width="70">
-                          <img
-                            src="img/person2.jpg"
-                            alt="avatar"
-                            class="responsive-img circle"
-                            style="margin-left: 10px; width: 40px;">
+                        <img
+                          src="img/person2.jpg"
+                          alt="avatar"
+                          class="responsive-img circle"
+                          style="margin-left: 10px; width: 40px"
+                        />
                       </td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Est, suscipit?</td>
+                      <td>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Est, suscipit?
+                      </td>
                       <td>
                         <a href="#!" class="green-text">
-                            <i class="material-icons">done</i>
+                          <i class="material-icons">done</i>
                         </a>
                         <a href="#!" class="red-text">
-                            <i class="material-icons">close</i>
+                          <i class="material-icons">close</i>
                         </a>
                       </td>
                     </tr>
                     <tr>
                       <td width="70">
-                          <img
-                            src="img/person3.jpg"
-                            alt="avatar"
-                            class="responsive-img circle"
-                            style="margin-left: 10px; width: 40px;">
+                        <img
+                          src="img/person3.jpg"
+                          alt="avatar"
+                          class="responsive-img circle"
+                          style="margin-left: 10px; width: 40px"
+                        />
                       </td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Est, suscipit?</td>
+                      <td>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Est, suscipit?
+                      </td>
                       <td>
                         <a href="#!" class="green-text">
-                            <i class="material-icons">done</i>
+                          <i class="material-icons">done</i>
                         </a>
                         <a href="#!" class="red-text">
-                            <i class="material-icons">close</i>
+                          <i class="material-icons">close</i>
                         </a>
                       </td>
                     </tr>
                     <tr>
                       <td width="70">
-                          <img
-                            src="img/person4.jpg"
-                            alt="avatar"
-                            class="responsive-img circle"
-                            style="margin-left: 10px; width: 40px;">
+                        <img
+                          src="img/person4.jpg"
+                          alt="avatar"
+                          class="responsive-img circle"
+                          style="margin-left: 10px; width: 40px"
+                        />
                       </td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Est, suscipit?</td>
+                      <td>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Est, suscipit?
+                      </td>
                       <td>
                         <a href="#!" class="green-text">
-                            <i class="material-icons">done</i>
+                          <i class="material-icons">done</i>
                         </a>
                         <a href="#!" class="red-text">
-                            <i class="material-icons">close</i>
+                          <i class="material-icons">close</i>
                         </a>
                       </td>
                     </tr>
@@ -227,7 +239,7 @@
     <!-- Section: Footer -->
 
     <footer class="section blue darken-2 white-text center">
-      <p>Madmin Panel Copyright &copy; 2020</p>
+      <p>Madmin Panel Copyright &copy; <span class="publish-date"></span></p>
     </footer>
 
     <!-- Preloader -->
@@ -248,13 +260,15 @@
     <!--Import jQuery before materialize.js-->
     <script
       type="text/javascript"
-      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script>   // Hide Sections
+    <script>
+      // Hide Sections
       $(".section").hide();
 
       setTimeout(() => {
-        $(document).ready(function() {
+        $(document).ready(function () {
           // Show Sections
           $(".section").fadeIn();
 
@@ -266,6 +280,11 @@
           // Modal Init
           $(".modal").modal();
         });
-      }, 1000);</script>
+      }, 1000);
+    </script>
+    <script>
+      const $footer = document.querySelector("#footer .publish-date");
+      $footer.innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

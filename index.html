@@ -150,7 +150,7 @@
       <div class="row">
         <div class="col s12 m6 l8">
           <div class="card-panel">
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            <div id="chartContainer" style="height: 300px; width: 100%"></div>
           </div>
         </div>
         <div class="col s12 m6 l4">
@@ -283,8 +283,8 @@
 
     <!-- Section: Footer -->
 
-    <footer class="section blue darken-2 white-text center">
-      <p>Madmin Panel Copyright &copy; 2020</p>
+    <footer class="section blue darken-2 white-text center" id="footer">
+      <p>Madmin Panel Copyright &copy; <span class="publish-date"></span></p>
     </footer>
 
     <!-- Fixed Action Button -->
@@ -410,7 +410,8 @@
     <!--Import jQuery before materialize.js-->
     <script
       type="text/javascript"
-      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -421,7 +422,7 @@
       $(".section").hide();
 
       setTimeout(() => {
-        $(document).ready(function() {
+        $(document).ready(function () {
           // Show Sections
           $(".section").fadeIn();
 
@@ -437,35 +438,35 @@
           $("select").material_select();
 
           // Counter
-          $(".count").each(function() {
+          $(".count").each(function () {
             $(this)
               .prop("Counter", 0)
               .animate(
                 {
-                  Counter: $(this).text()
+                  Counter: $(this).text(),
                 },
                 {
                   duration: 1000,
                   easing: "swing",
-                  step: function(now) {
+                  step: function (now) {
                     $(this).text(Math.ceil(now));
-                  }
+                  },
                 }
               );
           });
         });
         //  Comments - Approve & Deny
-        $(".approve").click(function(e) {
+        $(".approve").click(function (e) {
           Materialize.toast("Comment Approve", 3000);
           e.preventDefault();
         });
 
-        $(".deny").click(function(e) {
+        $(".deny").click(function (e) {
           Materialize.toast("Comment Denied", 3000);
           e.preventDefault();
         });
         // Quick Todos
-        $("#todo-form").submit(function(e) {
+        $("#todo-form").submit(function (e) {
           const output = `<li class="collection-item">
                     <div>${$("#todo").val()}
                       <a href="#!" class="secondary-content delete">
@@ -481,15 +482,13 @@
         });
 
         // Delete Todos
-        $(".todos").on("click", ".delete", function(e) {
-          $(this)
-            .parent()
-            .parent()
-            .remove();
+        $(".todos").on("click", ".delete", function (e) {
+          $(this).parent().parent().remove();
           Materialize.toast("Todo Removed", 2000);
           e.preventDefault();
         });
-        CKEDITOR.replace('body');
-      }, 1000);</script>
+        CKEDITOR.replace("body");
+      }, 1000);
+    </script>
   </body>
 </html>

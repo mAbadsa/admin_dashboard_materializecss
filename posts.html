@@ -219,10 +219,9 @@
     <!-- Section: Footer -->
 
     <footer class="section blue darken-2 white-text center">
-      <p>Madmin Panel Copyright &copy; 2020</p>
+      <p>Madmin Panel Copyright &copy; <span class="publish-date"></span></p>
     </footer>
 
-  
     <!-- Fixed Action Button -->
     <div class="fixed-action-btn">
       <a href="#post-modal" class="modal-trigger btn-floating btn-large red">
@@ -230,7 +229,7 @@
       </a>
     </div>
 
-        <!-- Add Post modal -->
+    <!-- Add Post modal -->
     <div id="post-modal" class="modal">
       <div class="modal-content">
         <h4>Add Post</h4>
@@ -285,11 +284,12 @@
     ></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
-    <script>   // Hide Sections
+    <script>
+      // Hide Sections
       $(".section").hide();
 
       setTimeout(() => {
-        $(document).ready(function() {
+        $(document).ready(function () {
           // Show Sections
           $(".section").fadeIn();
 
@@ -303,8 +303,13 @@
           // Select Init
           $("select").material_select();
           // CKEditor Init
-          CKEDITOR.replace('body');
+          CKEDITOR.replace("body");
         });
-      }, 1000);</script>
+      }, 1000);
+    </script>
+    <script>
+      const $footer = document.querySelector("#footer .publish-date");
+      $footer.innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

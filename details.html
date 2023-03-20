@@ -107,9 +107,7 @@
           <div class="col s12">
             <div class="card">
               <div class="card-content">
-                <span class="card-title">
-
-                </span>
+                <span class="card-title"> </span>
               </div>
             </div>
           </div>
@@ -120,10 +118,9 @@
     <!-- Section: Footer -->
 
     <footer class="section blue darken-2 white-text center">
-      <p>Madmin Panel Copyright &copy; 2020</p>
+      <p>Madmin Panel Copyright &copy; <span class="publish-date"></span></p>
     </footer>
 
-  
     <!-- Fixed Action Button -->
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large red">
@@ -171,11 +168,12 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
-    <script>   // Hide Sections
+    <script>
+      // Hide Sections
       $(".section").hide();
 
       setTimeout(() => {
-        $(document).ready(function() {
+        $(document).ready(function () {
           // Show Sections
           $(".section").fadeIn();
 
@@ -185,6 +183,11 @@
           // Init Side nav
           $(".button-collapse").sideNav();
         });
-      }, 1000);</script>
+      }, 1000);
+    </script>
+    <script>
+      const $footer = document.querySelector("#footer .publish-date");
+      $footer.innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>
