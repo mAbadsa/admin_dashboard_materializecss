@@ -490,5 +490,9 @@
         CKEDITOR.replace("body");
       }, 1000);
     </script>
+    <script>
+      const $footer = document.querySelector("#footer .publish-date");
+      $footer.innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>
